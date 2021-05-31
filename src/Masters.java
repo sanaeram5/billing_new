@@ -37,6 +37,7 @@ public class Masters extends javax.swing.JFrame {
     }
     public void connect(){
         try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
         conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/billing","root","");
         stm=conn.createStatement();
         }
